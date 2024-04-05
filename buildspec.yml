@@ -13,7 +13,7 @@ phases:
       - echo `$CODEBUILD_SRC_DIR`
   post_build:
     commands:
-      - python --version
+      - python --version 
       - pylint $CODEBUILD_SRC_DIR/*.py
       - echo `$CODEBUILD_SRC_DIR`
       - pylint $CODEBUILD_SRC_DIR/badmintonclub/*.py
