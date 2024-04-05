@@ -25,10 +25,7 @@ SECRET_KEY = 'django-insecure-c_eu8uvc3tp$emn-j8u3)@szt!1=u9lkax5^_q0xl#le)(efu&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["d244f7f131724e6b8933f9c9c7ecd1f3.vfs.cloud9.eu-west-1.amazonaws.com", "ncibadminton-env.eba-fqmfcr4x.eu-west-1.elasticbeanstalk.com", "ncibadmintonenv.eba-fqmfcr4x.eu-west-1.elasticbeanstalk.com"]
-
-CSRF_TRUSTED_ORIGINS = ['https://d244f7f131724e6b8933f9c9c7ecd1f3.vfs.cloud9.eu-west-1.amazonaws.com']
-
+ALLOWED_HOSTS = ["ncibadmintonenv.eba-fqmfcr4x.eu-west-1.elasticbeanstalk.com"]
 # Application definition
 
 INSTALLED_APPS = [
