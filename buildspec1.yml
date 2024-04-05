@@ -17,12 +17,11 @@ phases:
  
   build:
     commands:
-      - mvn sonar:sonar -Dsonar.login=47beecbef3471314df5e96af58cdc2fb48d0ef90 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=
-DevopsProject -Dsonar.organization=YaseenAliKhanIrl || true
+      - mvn sonar:sonar -Dsonar.login=47beecbef3471314df5e96af58cdc2fb48d0ef90 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=DevopsProject -Dsonar.organization=YaseenAliKhanIrl || true
       - sleep 5
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=DevopsProject >result.json
       - cat result.json
-      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0;fi 
-  artifacts:
-    files:
-      - '**/*'
+      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi 
+artifacts:
+  files:
+    - '**/*'
