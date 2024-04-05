@@ -20,4 +20,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  name: badmintonclub
+  name: badmintonclub 
