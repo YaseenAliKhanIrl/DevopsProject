@@ -22,8 +22,7 @@ DevopsProject -Dsonar.organization=YaseenAliKhanIrl || true
       - sleep 5
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=DevopsProject >result.json
       - cat result.json
-      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
- 
-artifacts:
-  files:
-    - '**/*'
+      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0;fi 
+  artifacts:
+    files:
+      - '**/*'
