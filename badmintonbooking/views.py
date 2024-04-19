@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import ApplicationForm
 
+# Create your views here.
 def index(request):
     if request.method == 'POST':
         form = ApplicationForm(request.POST)
