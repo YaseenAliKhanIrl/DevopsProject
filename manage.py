@@ -10,11 +10,10 @@ def main():
 
     """Run administrative tasks."""
 
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'petadapt.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'badmintonclub.settings')
 
     try:
 
-        # pylint: disable=import-outside-toplevel
 
         from django.core.management import execute_from_command_line
 

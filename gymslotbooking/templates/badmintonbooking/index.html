@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GYM TRAINING SLOTS</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #eaeaea; /* Body background color */
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .booking-form {
+        background-color: #fff; /* Form background color */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="time"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    input[type="time"]:focus {
+        border-color: #007bff;
+    }
+
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="date"]:hover,
+    input[type="time"]:hover {
+        border-color: #007bff; /* Change border color on hover */
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 15px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+    <h1>NCI GYM SLOTS</h1>
+    <div class="booking-form">
+        <form id="bookingForm" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Book Slot">
+            
+           
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+

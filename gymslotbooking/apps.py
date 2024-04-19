@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class BadmintonbookingConfig(AppConfig):
+class GymSlotbookingConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'badmintonbooking'
+    name = 'gymslotbooking'
